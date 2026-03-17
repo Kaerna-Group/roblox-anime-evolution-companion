@@ -1,0 +1,81 @@
+{
+  "dpsGuide": [
+    "Only the rarity and star level of the weapon matter for World Bosses and Divine Angels.",
+    "To deal maximum DPS, equip 3 swords with either 5-star SS weapons or 5-star SSS weapons.",
+    "5-star SS is stronger than 4-star SSS for this purpose."
+  ],
+  "easyWeapons": [
+    {
+      "world": "World 9 / Mines",
+      "weapon": "Crystal Flame",
+      "monster": "Liodas",
+      "dropRate": 15
+    },
+    {
+      "world": "World 12 / Orc Sanctuary",
+      "weapon": "Idol",
+      "monster": "Shaman",
+      "dropRate": 0.5
+    },
+    {
+      "world": "World 10 / Shadow Castle",
+      "weapon": "Nocturnis",
+      "monster": "Succubus",
+      "dropRate": 3
+    }
+  ],
+  "ssWeapons": [
+    { "world": "Fiery World", "weapon": "Cerberus Gaze", "damage": 600, "dropRate": 0.05, "monster": "Cerberus" },
+    { "world": "Mines", "weapon": "Crystal Flame", "damage": 750, "dropRate": 15, "monster": "Liodas" },
+    { "world": "Shadow Castle", "weapon": "Nocturnis", "damage": 860, "dropRate": 3, "monster": "Succubus" },
+    { "world": "Frozen Forest", "weapon": "Baruk", "damage": 1100, "dropRate": 0.05, "monster": "Snow King" },
+    { "world": "Orc Sanctuary", "weapon": "Idol", "damage": 1300, "dropRate": 0.5, "monster": "Shaman" },
+    { "world": "Demonic World", "weapon": "Bloodrift", "damage": 1500, "dropRate": 1, "monster": "Whiteshiki" },
+    { "world": "Demonic World", "weapon": "Lord of the Abyss", "damage": 1690, "dropRate": 0.2, "monster": "Whiteshiki" },
+    { "world": "Ant Island", "weapon": "Doomfang", "damage": 1730, "dropRate": 1, "monster": "Corvin Luxtra" },
+    { "world": "Ant Island", "weapon": "Soulrender", "damage": 1820, "dropRate": 0.2, "monster": "Corvin Luxtra" },
+    { "world": "Volcano", "weapon": "Shadowflame", "damage": 2040, "dropRate": 1, "monster": "Nyxarion" },
+    { "world": "Volcano", "weapon": "Aetherblade", "damage": 2400, "dropRate": 0.2, "monster": "Nyxarion" },
+    { "world": "Gloomridge", "weapon": "Void Reaper", "damage": 2100, "dropRate": 1, "monster": "Keeper" },
+    { "world": "Gloomridge", "weapon": "Crimson Dragon", "damage": 2670, "dropRate": 0.2, "monster": "Keeper" },
+    { "world": "Murimu Village", "weapon": "Poison", "damage": 2500, "dropRate": 1, "monster": "Azel" },
+    { "world": "Murimu Village", "weapon": "Aqua Soul", "damage": 2900, "dropRate": 0.2, "monster": "Azel" },
+    { "world": "Cairo", "weapon": "Oblivion", "damage": 3300, "dropRate": 0.3, "monster": "Jonrel" },
+    { "world": "Divine Garden", "weapon": "Zeyros", "damage": 3600, "dropRate": 0.3, "monster": "Posyros" },
+    { "world": "Spirit", "weapon": "Azura Edge", "damage": 4100, "dropRate": 0.3, "monster": "Silka" },
+    { "world": "Shantytown", "weapon": "Solvane", "damage": 4500, "dropRate": 0.3, "monster": "Enru or Rudren" },
+    { "world": "Fire Tokyo", "weapon": "Crimson Bastion", "damage": 4900, "dropRate": 0.3, "monster": "Ifrit" },
+    { "world": "Sayan Vally", "weapon": "Dravon", "damage": 5500, "dropRate": 0.3, "monster": "Blakaru" },
+    { "world": "Grand Sea", "weapon": "ShipShredder", "damage": 5900, "dropRate": 0.2, "monster": "Aureon" },
+    { "world": "Ninja Village", "weapon": "Hidden Threat", "damage": 6500, "dropRate": 0.2, "monster": "White Deity" },
+    { "world": "Swordsman Village", "weapon": "Elucidator", "damage": 7100, "dropRate": 0.2, "monster": "Solo" },
+    { "world": "Walled City", "weapon": "Final Attack", "damage": 7900, "dropRate": 0.8, "monster": "Steam Giant" }
+  ],
+  "baseRanks": [
+    "E-","E","E+",
+    "D-","D","D+",
+    "C-","C","C+",
+    "B-","B","B+",
+    "A-","A","A+",
+    "AA-","AA","AA+",
+    "AAA-","AAA","AAA+",
+    "S-","S","S+",
+    "SS-","SS","SS+",
+    "SSS-","SSS","SSS+",
+    "RE S"
+  ],
+  "seriesRanks": [
+    { "label": "S Series", "range": "S1 - S39" },
+    { "label": "G Series", "range": "G1 - G42" },
+    { "label": "T Series", "range": "T1 - T18" },
+    { "label": "Sh Series", "range": "Sh1 - Sh10" },
+    { "label": "Sw Series", "range": "Sw1 - Sw10" },
+    { "label": "Tn Series", "range": "Tn1 - T10" },
+    { "label": "H Series", "range": "H1 - H15" },
+    { "label": "SD Series", "range": "SD1 - SD12" },
+    { "label": "AL Series", "range": "AL1 - AL12" },
+    { "label": "GM Series", "range": "GM1 - GM15" },
+    { "label": "PT Series", "range": "PT1 - PT15" }
+  ]
+}
+

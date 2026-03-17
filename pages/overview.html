@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview | Game Helper</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../styles/site.css" />
+</head>
+<body data-page="overview">
+  <div class="site-wrap">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="page-shell page-main">
+      <section class="hero">
+        <span class="eyebrow">Live overview</span>
+        <h1>Nearest Events</h1>
+        <p class="section-copy">
+          One clean page for the next raid, nearest world boss, nearest divine angel,
+          and the short list of upcoming events across the whole helper.
+        </p>
+      </section>
+
+      <section class="section-block stats-grid">
+        <article class="stat-card"><p>Timezone</p><strong id="overview-timezone">Loading...</strong></article>
+        <article class="stat-card"><p>Tracking</p><strong>Raids / Bosses / Divine</strong></article>
+        <article class="stat-card"><p>View</p><strong>Closest First</strong></article>
+        <article class="stat-card"><p>Refresh</p><strong>Every Second</strong></article>
+      </section>
+
+      <section class="section-block grid-3">
+        <article class="panel" id="overview-raid">Loading...</article>
+        <article class="panel" id="overview-world-boss">Loading...</article>
+        <article class="panel" id="overview-divine">Loading...</article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Closest Upcoming Events</h2>
+            <p>Sorted globally across raids, world bosses, and divine angels.</p>
+          </div>
+        </div>
+        <div id="overview-upcoming-list" class="overview-list"><div class="card">Loading...</div></div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </div>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/overview.js" defer></script>
+</body>
+</html>

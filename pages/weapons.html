@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weapons & Ranks | Game Helper</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../styles/site.css" />
+</head>
+<body data-page="weapons">
+  <div class="site-wrap">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="page-shell page-main">
+      <section class="hero">
+        <span class="eyebrow">Weapon guide</span>
+        <h1>Weapons & Ranks</h1>
+        <p class="section-copy">
+          Boss damage guide, easiest SS farms, searchable SS weapon list, and rank progression tables
+          presented with less clutter and a stronger visual punch.
+        </p>
+      </section>
+
+      <section class="section-block stats-grid">
+        <article class="stat-card"><p>Tracked SS Weapons</p><strong id="summary-weapon-count">Loading...</strong></article>
+        <article class="stat-card"><p>Highest Damage</p><strong id="summary-highest-damage">Loading...</strong></article>
+        <article class="stat-card"><p>Best Easy Farm</p><strong id="summary-best-farm">Loading...</strong></article>
+        <article class="stat-card"><p>Boss DPS Rule</p><strong id="summary-dps-rule">Loading...</strong></article>
+      </section>
+
+      <section class="section-block callout callout--warning">
+        <h2>How To Deal More Damage To World Bosses / Divine Angels</h2>
+        <div id="dps-guide">Loading...</div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Best Easy 5-star Options</h2>
+            <p>Easiest SS weapons to push to 5 stars for strong boss DPS.</p>
+          </div>
+        </div>
+        <div id="easy-weapons" class="grid-3"><div class="card">Loading...</div></div>
+      </section>
+
+      <section class="section-block panel">
+        <div class="filter-bar">
+          <div>
+            <h2>SS Weapon Table</h2>
+            <p class="muted-copy">Search by world, weapon, or monster.</p>
+          </div>
+          <div class="form-row">
+            <input id="weapon-filter-input" type="text" placeholder="Search weapon / world / monster" class="input" />
+            <button id="weapon-filter-clear" class="button button--secondary" type="button">Clear</button>
+          </div>
+        </div>
+
+        <p class="muted-copy section-block">Showing <span id="visible-weapon-count">0</span> items</p>
+        <div class="table-wrap section-block">
+          <table class="data-table">
+            <thead>
+              <tr><th>World</th><th>Weapon</th><th>Damage</th><th>Drop Rate</th><th>Monster</th></tr>
+            </thead>
+            <tbody id="weapons-table-body"><tr><td colspan="5" class="table-empty">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header"><div><h2 class="section-title">Ranks</h2></div></div>
+
+        <article class="panel">
+          <h2>Base Ranks</h2>
+          <div id="base-ranks" class="rank-cloud"><span class="pill">Loading...</span></div>
+        </article>
+
+        <div id="series-ranks" class="grid-3 section-block"><div class="card">Loading...</div></div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </div>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/weapons.js" defer></script>
+</body>
+</html>

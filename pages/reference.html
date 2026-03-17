@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference | Game Helper</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../styles/site.css" />
+</head>
+<body data-page="reference">
+  <div class="site-wrap">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="page-shell page-main">
+      <section class="hero">
+        <span class="eyebrow">Static reference</span>
+        <h1>Reference Guide</h1>
+        <p class="section-copy">
+          One clean place for progression information: power sources, upgrade rates,
+          sword reforge costs, and practical tips for climbing early worlds faster.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header"><div><h2 class="section-title">Power Sources</h2></div></div>
+        <div id="power-sources" class="grid-3"><div class="card">Loading...</div></div>
+      </section>
+
+      <section class="section-block split-layout">
+        <article class="panel">
+          <div class="section-header">
+            <div>
+              <h2>Upgrade Rates</h2>
+              <p>Multipliers by star level and special modifiers.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Label</th><th>Multiplier</th><th>Applies To</th></tr>
+              </thead>
+              <tbody id="upgrade-rates-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </article>
+
+        <div>
+          <article class="panel">
+            <h2>Totals</h2>
+            <div id="totals-boxes" class="stack-grid"><div class="mini-stat"><span>Loading...</span><strong>...</strong></div></div>
+          </article>
+          <article class="panel section-block">
+            <h2>Quick Summary</h2>
+            <div id="summary-notes" class="stack-grid">Loading...</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block panel">
+        <div class="section-header"><div><h2 class="section-title">Weapon Reforge</h2></div></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Stars</th><th>Amount Needed</th><th>Resource</th></tr></thead>
+            <tbody id="reforge-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
+          </table>
+        </div>
+        <div id="reforge-total" class="notice section-block">Loading...</div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header"><div><h2 class="section-title">Early World Tips</h2></div></div>
+        <div id="tips-list" class="grid-2"><div class="card">Loading...</div></div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </div>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/reference.js" defer></script>
+</body>
+</html>

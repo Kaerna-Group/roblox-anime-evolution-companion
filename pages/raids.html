@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raids | Game Helper</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../styles/site.css" />
+</head>
+<body data-page="raids">
+  <div class="site-wrap">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="page-shell page-main">
+      <section class="hero">
+        <span class="eyebrow">Raid board</span>
+        <h1>Raid Timers</h1>
+        <p class="section-copy">
+          Horizontal raid board with custom sorting. Drag cards to reorder them the way you want,
+          and the layout will stay in your preferred order after reload.
+        </p>
+      </section>
+
+      <section class="section-block stats-grid">
+        <article class="stat-card"><p>Next Raid</p><strong id="summary-next-raid">Loading...</strong></article>
+        <article class="stat-card"><p>Countdown</p><strong id="summary-next-countdown">Loading...</strong></article>
+        <article class="stat-card"><p>Tracked Raids</p><strong id="summary-cycle">Loading...</strong></article>
+        <article class="stat-card"><p>Timezone</p><strong id="summary-timezone">Loading...</strong></article>
+      </section>
+
+      <section class="section-block callout callout--warning">
+        <h2>Drag And Drop Sorting</h2>
+        <p class="muted-copy">Grab any raid card and move it left or right to build your own order. The chosen layout is saved locally in your browser.</p>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">All Raids</h2>
+            <p>Mixed schedules supported, including the new Abuse Raid.</p>
+          </div>
+        </div>
+        <div id="raid-grid" class="raid-board"><div class="card">Loading...</div></div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </div>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/raids.js" defer></script>
+</body>
+</html>

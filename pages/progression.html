@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progression | Game Helper</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../styles/site.css" />
+</head>
+<body data-page="progression">
+  <div class="site-wrap">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="page-shell page-main">
+      <section class="hero">
+        <span class="eyebrow">Calculator</span>
+        <h1>Crit Progression</h1>
+        <p class="section-copy">
+          Enter your current crit level and Demonic Souls to see the next upgrade cost,
+          remaining path to max, and how much progress your current stash can instantly buy.
+        </p>
+      </section>
+
+      <section class="section-block split-layout">
+        <article class="panel input-panel">
+          <h2>Your Input</h2>
+
+          <div class="control-group">
+            <label for="current-level" class="label">Current Crit Level</label>
+            <select id="current-level" class="select"><option>Loading...</option></select>
+          </div>
+
+          <div class="control-group section-block">
+            <label for="current-souls" class="label">Current Demonic Souls</label>
+            <input id="current-souls" type="number" min="0" step="1" value="0" placeholder="Example: 50000" class="input" />
+          </div>
+
+          <div class="callout input-example section-block">
+            <h2>Example</h2>
+            <p class="muted-copy">If you are level 8 with 50,000 souls, this page shows souls needed for level 9 and the total distance from max.</p>
+          </div>
+        </article>
+
+        <div>
+          <div class="grid-3">
+            <article class="stat-card"><p>Current Multiplier</p><strong id="result-current-multiplier">-</strong></article>
+            <article class="stat-card"><p>Next Multiplier</p><strong id="result-next-multiplier">-</strong></article>
+            <article class="stat-card"><p>Souls to Next Level</p><strong id="result-souls-next">-</strong></article>
+            <article class="stat-card"><p>Souls Remaining to Max</p><strong id="result-souls-max">-</strong></article>
+            <article class="stat-card"><p>Affordable Level Right Now</p><strong id="result-affordable-level">-</strong></article>
+            <article class="stat-card"><p>Souls Left After Auto Spend</p><strong id="result-souls-left">-</strong></article>
+          </div>
+
+          <article class="panel section-block">
+            <div class="section-header">
+              <div>
+                <h2>Overall Progress</h2>
+                <p>Based on the full souls needed from level 1 to max.</p>
+              </div>
+              <strong id="progress-percent">0%</strong>
+            </div>
+            <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+            <p id="progress-text" class="muted-copy section-block">Loading...</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block panel">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Crit Level Table</h2>
+            <p>Cost to reach means the souls needed for that specific upgrade step.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Multiplier</th>
+                <th>Cost to Reach</th>
+                <th>Total Cost to Reach</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="crit-table-body"><tr><td colspan="5" class="table-empty">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </div>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/progression.js" defer></script>
+</body>
+</html>

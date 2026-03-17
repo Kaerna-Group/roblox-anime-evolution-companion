@@ -1,0 +1,79 @@
+{
+    "pages": [
+      {
+        "id": "boss-timers",
+        "title": "Boss Timers",
+        "description": "World and Divine boss schedules with live countdowns",
+        "sections": [
+          {
+            "id": "world-bosses",
+            "title": "World Bosses",
+            "type": "boss-grid",
+            "dataKey": "worldBosses"
+          },
+          {
+            "id": "divine-bosses",
+            "title": "Divine Bosses",
+            "type": "boss-grid",
+            "dataKey": "divineBosses"
+          },
+          {
+            "id": "special-rules",
+            "title": "Spawn Rules",
+            "type": "notice-list",
+            "dataKey": "specialRules"
+          }
+        ]
+      },
+      {
+        "id": "progression",
+        "title": "Progression",
+        "description": "Crit upgrade calculator and early game progression tips",
+        "sections": [
+          {
+            "id": "crit-calculator",
+            "title": "Crit Upgrade Calculator",
+            "type": "crit-calculator",
+            "dataKey": "critLevels"
+          },
+          {
+            "id": "power-sources",
+            "title": "Power Sources",
+            "type": "stat-cards",
+            "dataKey": "powerSources"
+          },
+          {
+            "id": "upgrade-rates",
+            "title": "Upgrade Rates",
+            "type": "rate-table",
+            "dataKey": "upgradeRates"
+          },
+          {
+            "id": "weapon-reforge",
+            "title": "Weapon Reforge",
+            "type": "reforge-table",
+            "dataKey": "weaponReforge"
+          },
+          {
+            "id": "early-tips",
+            "title": "How to Progress Faster in Early Worlds",
+            "type": "tip-list",
+            "dataKey": "earlyProgressionTips"
+          }
+        ]
+      },
+      {
+        "id": "reference",
+        "title": "Reference",
+        "description": "Static game values and notes",
+        "sections": [
+          {
+            "id": "summary-reference",
+            "title": "General Reference",
+            "type": "summary",
+            "dataKey": "powerSources"
+          }
+        ]
+      }
+    ]
+  }

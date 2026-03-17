@@ -1,0 +1,92 @@
+{
+  "timeFormat": "HH:mm",
+  "timezoneMode": "client-local",
+  "worldBosses": [
+    { "world": 1, "name": "World Boss 1", "slots": ["02:00", "06:00", "11:00", "16:00", "21:00"] },
+    { "world": 2, "name": "World Boss 2", "slots": ["02:10", "06:10", "11:10", "16:10", "21:10"] },
+    { "world": 3, "name": "World Boss 3", "slots": ["02:20", "06:20", "11:20", "16:20", "21:20"] },
+    { "world": 4, "name": "World Boss 4", "slots": ["02:30", "06:30", "11:30", "16:30", "21:30"] },
+    { "world": 5, "name": "World Boss 5", "slots": ["02:40", "06:40", "11:40", "16:40", "21:40"] },
+    { "world": 6, "name": "World Boss 6", "slots": ["02:50", "06:50", "11:50", "16:50", "21:50"] },
+
+    { "world": 7, "name": "World Boss 7", "slots": ["07:00", "12:00", "17:00", "22:00"] },
+    { "world": 8, "name": "World Boss 8", "slots": ["07:10", "12:10", "17:10", "22:10"] },
+    { "world": 9, "name": "World Boss 9", "slots": ["07:20", "12:20", "17:20", "22:20"] },
+    { "world": 10, "name": "World Boss 10", "slots": ["07:30", "12:30", "17:30", "22:30"] },
+    { "world": 11, "name": "World Boss 11", "slots": ["07:40", "12:40", "17:40", "22:40"] },
+    { "world": 12, "name": "World Boss 12", "slots": ["07:50", "12:50", "17:50", "22:50"] },
+
+    {
+      "world": 13,
+      "name": "World Boss 13",
+      "slots": ["03:00", "08:00", "13:00", "18:00", "22:50"],
+      "needsVerification": true,
+      "verificationNote": "Last slot preserved exactly as source."
+    },
+    { "world": 14, "name": "World Boss 14", "slots": ["03:10", "08:10", "13:10", "18:10", "23:10"] },
+    { "world": 15, "name": "World Boss 15", "slots": ["03:20", "08:20", "13:20", "18:20", "23:20"] },
+    { "world": 16, "name": "World Boss 16", "slots": ["03:30", "08:30", "13:30", "18:30", "23:30"] },
+    { "world": 17, "name": "World Boss 17", "slots": ["03:40", "08:40", "13:40", "18:40", "23:40"] },
+    { "world": 18, "name": "World Boss 18", "slots": ["03:50", "08:50", "13:50", "18:50", "23:50"] },
+
+    { "world": 19, "name": "World Boss 19", "slots": ["04:00", "09:00", "14:00", "19:00", "00:00"] },
+    { "world": 20, "name": "World Boss 20", "slots": ["04:10", "09:10", "14:10", "19:10", "00:10"] },
+    { "world": 21, "name": "World Boss 21", "slots": ["04:20", "09:20", "14:20", "19:20", "00:20"] },
+    { "world": 22, "name": "World Boss 22", "slots": ["04:30", "09:30", "14:30", "19:30", "00:30"] },
+    { "world": 23, "name": "World Boss 23", "slots": ["04:40", "09:40", "14:40", "19:40", "00:40"] },
+    { "world": 24, "name": "World Boss 24", "slots": ["04:50", "09:50", "14:50", "19:50", "00:50"] },
+    { "world": 25, "name": "World Boss 25", "slots": ["05:00", "10:00", "15:00", "20:00", "01:00"] },
+    { "world": 26, "name": "World Boss 26", "slots": ["05:10", "10:10", "15:10", "20:10", "01:10"] },
+    { "world": 27, "name": "World Boss 27", "slots": ["05:20", "10:20", "15:20", "20:20", "01:20"] },
+    { "world": 28, "name": "World Boss 28", "slots": ["05:30", "10:30", "15:30", "20:30", "01:30"] },
+    { "world": 29, "name": "World Boss 29", "slots": ["05:40", "10:40", "15:40", "20:40", "01:40"] },
+    { "world": 30, "name": "World Boss 30", "slots": ["05:50", "10:50", "15:50", "20:50", "01:50"] }
+  ],
+  "divineBosses": [
+    { "world": 1, "name": "Divine Boss 1", "slots": ["22:30", null, "07:30", "15:00"] },
+    { "world": 2, "name": "Divine Boss 2", "slots": ["22:45", null, "07:45", "15:15"] },
+    { "world": 3, "name": "Divine Boss 3", "slots": ["23:00", null, "08:00", "15:30"] },
+    { "world": 4, "name": "Divine Boss 4", "slots": ["23:15", null, "08:15", "15:45"] },
+    { "world": 5, "name": "Divine Boss 5", "slots": ["23:30", null, "08:30", "16:00"] },
+    { "world": 6, "name": "Divine Boss 6", "slots": ["23:45", null, "08:45", "16:15"] },
+    { "world": 7, "name": "Divine Boss 7", "slots": ["00:00", null, "09:00", "16:30"] },
+    { "world": 8, "name": "Divine Boss 8", "slots": ["00:15", null, "09:15", "16:45"] },
+    { "world": 9, "name": "Divine Boss 9", "slots": ["00:30", null, "09:30", "17:00"] },
+    { "world": 10, "name": "Divine Boss 10", "slots": ["00:45", null, "09:45", "17:15"] },
+    { "world": 11, "name": "Divine Boss 11", "slots": ["01:00", null, "10:00", "17:30"] },
+    { "world": 12, "name": "Divine Boss 12", "slots": ["01:15", null, "10:15", "17:45"] },
+
+    { "world": 13, "name": "Divine Boss 13", "slots": ["01:30", "03:00", "10:30", "18:00"] },
+    { "world": 14, "name": "Divine Boss 14", "slots": ["01:45", "03:15", "10:45", "18:15"] },
+    { "world": 15, "name": "Divine Boss 15", "slots": ["02:00", "03:30", "11:00", "18:30"] },
+    { "world": 16, "name": "Divine Boss 16", "slots": ["02:15", "03:45", "11:15", "18:45"] },
+    { "world": 17, "name": "Divine Boss 17", "slots": ["02:30", "04:00", "11:30", "19:00"] },
+    { "world": 18, "name": "Divine Boss 18", "slots": ["02:45", "04:15", "11:45", "19:15"] },
+
+    { "world": 19, "name": "Divine Boss 19", "slots": [null, "04:30", "12:00", "19:30"] },
+    { "world": 20, "name": "Divine Boss 20", "slots": [null, "04:45", "12:15", "19:45"] },
+    { "world": 21, "name": "Divine Boss 21", "slots": [null, "05:00", "12:30", "20:00"] },
+    { "world": 22, "name": "Divine Boss 22", "slots": [null, "05:15", "12:45", "20:15"] },
+    { "world": 23, "name": "Divine Boss 23", "slots": [null, "05:30", "13:00", "20:30"] },
+    { "world": 24, "name": "Divine Boss 24", "slots": [null, "05:45", "13:15", "20:45"] },
+    { "world": 25, "name": "Divine Boss 25", "slots": [null, "06:00", "13:30", "21:00"] },
+    { "world": 26, "name": "Divine Boss 26", "slots": [null, "06:15", "13:45", "21:15"] },
+    { "world": 27, "name": "Divine Boss 27", "slots": [null, "06:30", "14:00", "21:30"] },
+    { "world": 28, "name": "Divine Boss 28", "slots": [null, "06:45", "14:15", "21:45"] },
+    { "world": 29, "name": "Divine Boss 29", "slots": [null, "07:00", "14:30", "22:00"] },
+    { "world": 30, "name": "Divine Boss 30", "slots": [null, "07:15", "14:45", "22:15"] }
+  ],
+  "specialRules": [
+    {
+      "id": "w13_w18_private_reset",
+      "title": "Private Server Reset Required",
+      "description": "After chest reset, reset private server for World 13-18 bosses to spawn.",
+      "details": "If you do not reset private server, the first boss after reset that spawns is World 19."
+    },
+    {
+      "id": "w13_chest_reset_note",
+      "title": "Chest Reset Note",
+      "description": "At chest reset, reset private server for it to spawn in W13."
+    }
+  ]
+}

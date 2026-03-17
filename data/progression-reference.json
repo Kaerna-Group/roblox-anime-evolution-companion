@@ -1,0 +1,81 @@
+{
+    "powerSources": [
+      {
+        "id": "index",
+        "title": "Index",
+        "subtitle": "Enemies",
+        "effect": "Gives you Power",
+        "maxMultiplier": 25.84
+      },
+      {
+        "id": "pets",
+        "title": "Pets",
+        "subtitle": "Soul gain",
+        "effect": "Gives you Soul gain",
+        "freeEggMaxMultiplier": 17.68,
+        "totalMaxMultiplier": 25.36
+      },
+      {
+        "id": "weapons",
+        "title": "Weapons",
+        "subtitle": "Damage",
+        "effect": "Gives you Damage",
+        "maxMultiplier": 14.49
+      }
+    ],
+    "upgradeRates": [
+      {
+        "id": "unluck",
+        "label": "Unluck",
+        "multiplier": 0.03,
+        "appliesTo": ["general"]
+      },
+      {
+        "id": "star_1",
+        "label": "1 Star",
+        "multiplier": 0.01,
+        "appliesTo": ["general"]
+      },
+      {
+        "id": "star_2",
+        "label": "2 Stars",
+        "multiplier": 0.01,
+        "appliesTo": ["general"]
+      },
+      {
+        "id": "star_3",
+        "label": "3 Stars",
+        "multiplier": 0.03,
+        "appliesTo": ["general", "swords"]
+      },
+      {
+        "id": "star_4",
+        "label": "4 Stars",
+        "multiplier": 0.03,
+        "appliesTo": ["swords"]
+      }
+    ],
+    "totals": {
+      "general": 0.08,
+      "swordsOnly": 0.09
+    },
+    "weaponReforge": {
+      "resourceName": "Swords",
+      "levels": [
+        { "stars": 1, "amountNeeded": 2 },
+        { "stars": 2, "amountNeeded": 5 },
+        { "stars": 3, "amountNeeded": 10 },
+        { "stars": 4, "amountNeeded": 15 },
+        { "stars": 5, "amountNeeded": 30 }
+      ],
+      "totalNeeded": 58
+    },
+    "earlyProgressionTips": [
+      "Put all your talents in power.",
+      "If you get stuck in a world, hatch eggs to gain power faster.",
+      "Kill all mobs in all worlds to fill out the index because it gives a power multiplier.",
+      "Ask people to carry you in raid because raids give a lot.",
+      "Use power potions when you have them.",
+      "When progressing to a new world, use damage and soul potions to get souls faster and hatch new eggs there."
+    ]
+  }

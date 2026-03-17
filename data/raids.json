@@ -1,0 +1,44 @@
+{
+  "raids": [
+    {
+      "id": "demon",
+      "name": "Demon Raid",
+      "scheduleType": "hourly",
+      "minuteOffset": 0,
+      "accent": "red",
+      "description": "Spawns every hour at :00"
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal Raid",
+      "scheduleType": "hourly",
+      "minuteOffset": 15,
+      "accent": "cyan",
+      "description": "Spawns every hour at :15"
+    },
+    {
+      "id": "crazy",
+      "name": "Crazy Raid",
+      "scheduleType": "hourly",
+      "minuteOffset": 30,
+      "accent": "pink",
+      "description": "Spawns every hour at :30"
+    },
+    {
+      "id": "insane",
+      "name": "Insane Raid",
+      "scheduleType": "hourly",
+      "minuteOffset": 45,
+      "accent": "gold",
+      "description": "Spawns every hour at :45"
+    },
+    {
+      "id": "abuse",
+      "name": "Abuse Raid",
+      "scheduleType": "fixed",
+      "slots": ["00:00", "06:00", "12:00", "18:00"],
+      "accent": "violet",
+      "description": "Spawns daily at 00:00, 06:00, 12:00, and 18:00"
+    }
+  ]
+}
