@@ -3,16 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let weaponsData = null;
+let progressionData = null;
 let filteredWeapons = [];
 
 async function initWeaponsPage() {
   try {
-    weaponsData = await Site.loadJson("weapons.json");
+    [weaponsData, progressionData] = await Promise.all([
+      Site.loadJson("weapons.json"),
+      Site.loadJson("progression-reference.json")
+    ]);
     filteredWeapons = [...(weaponsData.ssWeapons || [])];
 
     renderGuide();
     renderEasyWeapons();
-    renderRanks();
+    renderReforge();
     bindWeaponFilter();
     applyWeaponFilter("");
     renderSummary();
@@ -67,27 +71,24 @@ function renderSummary() {
   document.getElementById("summary-best-farm").textContent = `${bestFarm.weapon} - ${Site.formatPercent(bestFarm.dropRate)}`;
 }
 
-function renderRanks() {
-  const baseContainer = document.getElementById("base-ranks");
-  const seriesContainer = document.getElementById("series-ranks");
-  const baseRanks = (weaponsData && weaponsData.baseRanks) || [];
-  const seriesRanks = (weaponsData && weaponsData.seriesRanks) || [];
+function renderReforge() {
+  const weaponReforge = progressionData?.weaponReforge || {};
+  const levels = Array.isArray(weaponReforge.levels) ? weaponReforge.levels : [];
 
-  baseContainer.innerHTML = baseRanks
-    .map((rank) => `<span class="rank-chip">${Site.escapeHtml(rank)}</span>`)
+  document.getElementById("reforge-body").innerHTML = levels
+    .map((item) => `
+      <tr>
+        <td>${item.stars}-star</td>
+        <td>${Site.formatNumber(item.amountNeeded || 0)}</td>
+        <td>${Site.escapeHtml(weaponReforge.resourceName || "Resource")}</td>
+      </tr>
+    `)
     .join("");
 
-  seriesContainer.innerHTML = seriesRanks
-    .map(
-      (item) => `
-        <article class="card rank-card">
-          <p class="meta-label">${Site.escapeHtml(item.label)}</p>
-          <h3>${Site.escapeHtml(item.range)}</h3>
-          <p class="muted-copy">Progression band for this series.</p>
-        </article>
-      `
-    )
-    .join("");
+  document.getElementById("reforge-total").innerHTML = `
+    <strong>Total needed:</strong> ${Site.formatNumber(weaponReforge.totalNeeded || 0)}
+    ${Site.escapeHtml(weaponReforge.resourceName || "items")}
+  `;
 }
 
 function bindWeaponFilter() {
@@ -155,8 +156,12 @@ function renderWeaponsError() {
 
   document.getElementById("dps-guide").innerHTML = fallback;
   document.getElementById("easy-weapons").innerHTML = fallback;
-  document.getElementById("base-ranks").innerHTML = fallback;
-  document.getElementById("series-ranks").innerHTML = fallback;
+  document.getElementById("reforge-total").textContent = "Failed to load data.";
+  document.getElementById("reforge-body").innerHTML = `
+    <tr>
+      <td colspan="3" class="table-empty table-empty--error">Failed to load reforge data.</td>
+    </tr>
+  `;
   document.getElementById("weapons-table-body").innerHTML = `
     <tr>
       <td colspan="5" class="table-empty table-empty--error">Failed to load weapons data.</td>

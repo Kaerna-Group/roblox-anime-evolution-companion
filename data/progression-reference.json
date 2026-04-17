@@ -1,81 +1,212 @@
 {
-    "powerSources": [
-      {
-        "id": "index",
-        "title": "Index",
-        "subtitle": "Enemies",
-        "effect": "Gives you Power",
-        "maxMultiplier": 25.84
-      },
-      {
-        "id": "pets",
-        "title": "Pets",
-        "subtitle": "Soul gain",
-        "effect": "Gives you Soul gain",
-        "freeEggMaxMultiplier": 17.68,
-        "totalMaxMultiplier": 25.36
-      },
-      {
-        "id": "weapons",
-        "title": "Weapons",
-        "subtitle": "Damage",
-        "effect": "Gives you Damage",
-        "maxMultiplier": 14.49
-      }
-    ],
-    "upgradeRates": [
-      {
-        "id": "unluck",
-        "label": "Unluck",
-        "multiplier": 0.03,
-        "appliesTo": ["general"]
-      },
-      {
-        "id": "star_1",
-        "label": "1 Star",
-        "multiplier": 0.01,
-        "appliesTo": ["general"]
-      },
-      {
-        "id": "star_2",
-        "label": "2 Stars",
-        "multiplier": 0.01,
-        "appliesTo": ["general"]
-      },
-      {
-        "id": "star_3",
-        "label": "3 Stars",
-        "multiplier": 0.03,
-        "appliesTo": ["general", "swords"]
-      },
-      {
-        "id": "star_4",
-        "label": "4 Stars",
-        "multiplier": 0.03,
-        "appliesTo": ["swords"]
-      }
-    ],
-    "totals": {
-      "general": 0.08,
-      "swordsOnly": 0.09
+  "powerSources": [
+    {
+      "id": "index",
+      "title": "Index",
+      "subtitle": "Enemies",
+      "effect": "Gives you Power",
+      "maxMultiplier": 25.84
     },
-    "weaponReforge": {
-      "resourceName": "Swords",
-      "levels": [
-        { "stars": 1, "amountNeeded": 2 },
-        { "stars": 2, "amountNeeded": 5 },
-        { "stars": 3, "amountNeeded": 10 },
-        { "stars": 4, "amountNeeded": 15 },
-        { "stars": 5, "amountNeeded": 30 }
-      ],
-      "totalNeeded": 58
+    {
+      "id": "pets",
+      "title": "Pets",
+      "subtitle": "Soul gain",
+      "effect": "Gives you Soul gain",
+      "freeEggMaxMultiplier": 17.68,
+      "totalMaxMultiplier": 25.36
     },
-    "earlyProgressionTips": [
-      "Put all your talents in power.",
-      "If you get stuck in a world, hatch eggs to gain power faster.",
-      "Kill all mobs in all worlds to fill out the index because it gives a power multiplier.",
-      "Ask people to carry you in raid because raids give a lot.",
-      "Use power potions when you have them.",
-      "When progressing to a new world, use damage and soul potions to get souls faster and hatch new eggs there."
+    {
+      "id": "weapons",
+      "title": "Weapons",
+      "subtitle": "Damage",
+      "effect": "Gives you Damage",
+      "maxMultiplier": 14.49
+    }
+  ],
+  "upgradeRates": [
+    {
+      "id": "unluck",
+      "label": "Unluck",
+      "multiplier": 0.03,
+      "appliesTo": ["general"]
+    },
+    {
+      "id": "star_1",
+      "label": "1 Star",
+      "multiplier": 0.01,
+      "appliesTo": ["general"]
+    },
+    {
+      "id": "star_2",
+      "label": "2 Stars",
+      "multiplier": 0.01,
+      "appliesTo": ["general"]
+    },
+    {
+      "id": "star_3",
+      "label": "3 Stars",
+      "multiplier": 0.03,
+      "appliesTo": ["general", "swords"]
+    },
+    {
+      "id": "star_4",
+      "label": "4 Stars",
+      "multiplier": 0.03,
+      "appliesTo": ["swords"]
+    }
+  ],
+  "totals": {
+    "general": 0.08,
+    "swordsOnly": 0.09
+  },
+  "weaponReforge": {
+    "resourceName": "Swords",
+    "levels": [
+      { "stars": 1, "amountNeeded": 2 },
+      { "stars": 2, "amountNeeded": 5 },
+      { "stars": 3, "amountNeeded": 10 },
+      { "stars": 4, "amountNeeded": 15 },
+      { "stars": 5, "amountNeeded": 30 }
+    ],
+    "totalNeeded": 58
+  },
+  "earlyProgressionTips": [
+    "Put all your talents in power.",
+    "If you get stuck in a world, hatch eggs to gain power faster.",
+    "Kill all mobs in all worlds to fill out the index because it gives a power multiplier.",
+    "Ask people to carry you in raid because raids give a lot.",
+    "Use power potions when you have them.",
+    "When progressing to a new world, use damage and soul potions to get souls faster and hatch new eggs there."
+  ],
+  "weekendBoosts": [
+    {
+      "name": "2x Souls / Gems",
+      "window": "Friday 00:00 UTC to Saturday 00:00 UTC",
+      "sourceDate": "2026-01-16"
+    },
+    {
+      "name": "2x Power",
+      "window": "Saturday 00:00 UTC to Monday 00:00 UTC",
+      "sourceDate": "2026-01-16"
+    }
+  ],
+  "worldBossCycle": {
+    "interval": "Every 3 hours and 40 minutes",
+    "sourceDate": "2026-01-16"
+  },
+  "gamePassOrder": {
+    "title": "Recommended order from top players",
+    "sourceDate": "2026-03-03",
+    "items": [
+      "Fast Click",
+      "2x Power",
+      "VIP",
+      "Magnet / Fast Run (optional QoL)",
+      "+4 Pets Equip",
+      "Fast Open",
+      "+3 More Equip",
+      "2x Souls",
+      "2x Drop",
+      "Small Storage",
+      "More Open",
+      "Big Storage",
+      "Lucky",
+      "Buy Sword Pack",
+      "2x Shadow Damage",
+      "Buy 1 Devil",
+      "2 Sword",
+      "Buy 2 Devils",
+      "Super Lucky",
+      "3 Sword",
+      "Ultra Lucky",
+      "Extra General Equip",
+      "30% Attack Radius",
+      "Buy 5th Devil",
+      "+1 Target (unnecessary)"
+    ],
+    "notes": [
+      "Use your own judgment. This is a player-made priority list, not an official order.",
+      "Do not buy multiple sword game passes early if your extra swords are much weaker.",
+      "Battle pass generals are still considered a strong grind target."
     ]
-  }
+  },
+  "eNotation": {
+    "title": "E-Notation Reference",
+    "sourceDate": "2025-11-02",
+    "notes": [
+      "Community reference for large-number abbreviations used in game.",
+      "The original note says this can change when new worlds release."
+    ],
+    "entries": [
+      { "notation": "e0", "value": "1", "abbreviation": "1", "name": "" },
+      { "notation": "e1", "value": "10", "abbreviation": "10", "name": "" },
+      { "notation": "e2", "value": "100", "abbreviation": "100", "name": "" },
+      { "notation": "e3", "value": "1,000", "abbreviation": "1k", "name": "Thousand" },
+      { "notation": "e6", "value": "1,000,000", "abbreviation": "1M", "name": "Million" },
+      { "notation": "e9", "value": "1,000,000,000", "abbreviation": "1B", "name": "Billion" },
+      { "notation": "e12", "value": "1,000,000,000,000", "abbreviation": "1T", "name": "Trillion" },
+      { "notation": "e15", "value": "1Qd", "abbreviation": "1Qd", "name": "Quadrillion" },
+      { "notation": "e18", "value": "1Qn", "abbreviation": "1Qn", "name": "Quintillion" },
+      { "notation": "e21", "value": "1Sx", "abbreviation": "1Sx", "name": "Sextillion" },
+      { "notation": "e24", "value": "1Sp", "abbreviation": "1Sp", "name": "Septillion" },
+      { "notation": "e27", "value": "1O", "abbreviation": "1O", "name": "Octillion" },
+      { "notation": "e30", "value": "1N", "abbreviation": "1N", "name": "Nonillion" },
+      { "notation": "e33", "value": "1D", "abbreviation": "1D", "name": "Decillion" },
+      { "notation": "e36", "value": "1UD", "abbreviation": "1UD", "name": "UnDecillion" },
+      { "notation": "e39", "value": "DD", "abbreviation": "DD", "name": "DuoDecillion" },
+      { "notation": "e42", "value": "TD", "abbreviation": "TD", "name": "TreDecillion" },
+      { "notation": "e45", "value": "QdD", "abbreviation": "QdD", "name": "QuadDecillion" },
+      { "notation": "e48", "value": "QnD", "abbreviation": "QnD", "name": "QuinDecillion" },
+      { "notation": "e51", "value": "SxD", "abbreviation": "SxD", "name": "SextDecillion" },
+      { "notation": "e54", "value": "SpD", "abbreviation": "SpD", "name": "SeptDecillion" },
+      { "notation": "e57", "value": "OD", "abbreviation": "OD", "name": "OctoDecillion" },
+      { "notation": "e60", "value": "ND", "abbreviation": "ND", "name": "NonDecillion" },
+      { "notation": "e63", "value": "Vg", "abbreviation": "Vg", "name": "Vigintillion" },
+      { "notation": "e66", "value": "UVg", "abbreviation": "UVg", "name": "UnVigintillion" },
+      { "notation": "e69", "value": "DVg", "abbreviation": "DVg", "name": "DuoVigintillion" },
+      { "notation": "e72", "value": "TVg", "abbreviation": "TVg", "name": "TreVigintillion" },
+      { "notation": "e75", "value": "QdV", "abbreviation": "QdV", "name": "QuadVigintillion" },
+      { "notation": "e78", "value": "QnV", "abbreviation": "QnV", "name": "QuinVigintillion" },
+      { "notation": "e81", "value": "SxV", "abbreviation": "SxV", "name": "SextVigintillion" },
+      { "notation": "e84", "value": "SpV", "abbreviation": "SpV", "name": "SeptVigintillion" }
+    ]
+  },
+  "communityResources": {
+    "links": [
+      {
+        "label": "Play on Roblox",
+        "url": "https://www.roblox.com/games/133322550157181/SPIRIT-Anime-Evolution"
+      },
+      {
+        "label": "Discord Server",
+        "url": "https://discord.gg/anime-evolution"
+      },
+      {
+        "label": "Roblox Group",
+        "url": "https://www.roblox.com/communities/35547019/AEVO"
+      },
+      {
+        "label": "Anime Evolution Wiki",
+        "url": "https://anime-evolution.fandom.com/wiki/Anime_Evolution_Wiki"
+      }
+    ],
+    "extras": [
+      "Additional resources mentioned by the community include Farm Kill achievement macro guidance and a macro file/video for players without Fast Walk.",
+      "Wiki contribution instructions were shared on July 13, 2025 and July 14, 2025 in Discord messages."
+    ]
+  },
+  "eventHistory": [
+    {
+      "name": "Infinite Castle",
+      "status": "Removed / Ended",
+      "details": "Came with the Slayer achievements and was the only way to complete them.",
+      "sourceDate": "2025-11-05"
+    },
+    {
+      "name": "Halloween",
+      "status": "Added on 2025-10-25 and ended on 2025-11-08",
+      "details": "Included the Halloween raid and world plus raid achievements, pets, and mobs for index progression.",
+      "sourceDate": "2025-11-05"
+    }
+  ]
+}

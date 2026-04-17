@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranks | Game Helper</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../styles/site.css" />
+</head>
+<body data-page="ranks">
+  <div class="site-wrap">
+    <header id="site-header" class="site-header"></header>
+
+    <main class="page-shell page-main">
+      <section class="hero">
+        <span class="eyebrow">Rank reference</span>
+        <h1>Ranks</h1>
+        <p class="section-copy">
+          Focused rank page with the stored base ladder, series ranges, and short notes
+          explaining how this helper currently organizes rank data.
+        </p>
+      </section>
+
+      <section class="section-block stats-grid">
+        <article class="stat-card"><p>Base Ranks</p><strong id="rank-summary-base">Loading...</strong></article>
+        <article class="stat-card"><p>Series Groups</p><strong id="rank-summary-series">Loading...</strong></article>
+        <article class="stat-card"><p>First Rank</p><strong id="rank-summary-first">Loading...</strong></article>
+        <article class="stat-card"><p>Highest Stored</p><strong id="rank-summary-last">Loading...</strong></article>
+      </section>
+
+      <section class="section-block content-with-toc">
+        <aside class="panel toc-panel">
+          <h2>On This Page</h2>
+          <nav class="toc-list" aria-label="Ranks sections">
+            <a class="toc-link" href="#rank-notes-section">Rank Notes</a>
+            <a class="toc-link" href="#base-ranks-section">Base Rank Ladder</a>
+            <a class="toc-link" href="#series-ranks-section">Series Ranges</a>
+          </nav>
+        </aside>
+
+        <div>
+      <section id="rank-notes-section" class="section-block panel toc-target">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Rank Notes</h2>
+            <p>Stored helper notes based on the rank data currently inside the project.</p>
+          </div>
+          <a href="./weapons.html" class="button button--secondary">Back To Weapons</a>
+        </div>
+        <div id="rank-notes" class="grid-2">Loading...</div>
+      </section>
+
+      <section id="base-ranks-section" class="section-block panel toc-target">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Base Rank Ladder</h2>
+            <p>All currently stored base ranks in order.</p>
+          </div>
+        </div>
+        <div id="base-ranks" class="rank-cloud"><span class="pill">Loading...</span></div>
+      </section>
+
+      <section id="series-ranks-section" class="section-block toc-target">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Series Ranges</h2>
+            <p>Community reference bands tracked by label and stored range.</p>
+          </div>
+        </div>
+        <div id="series-ranks" class="grid-3">Loading...</div>
+      </section>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </div>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/ranks.js" defer></script>
+</body>
+</html>

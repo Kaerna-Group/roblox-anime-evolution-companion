@@ -167,15 +167,18 @@
           </span>
         </a>
 
-        <nav class="site-nav" aria-label="Main navigation">
-          ${navLink(activePage, "home", `${base}index.html`, "Home")}
-          ${navLink(activePage, "overview", `${base}pages/overview.html`, "Overview")}
-          ${navLink(activePage, "boss-timers", `${base}pages/boss-timers.html`, "Boss Timers")}
-          ${navLink(activePage, "raids", `${base}pages/raids.html`, "Raids")}
-          ${navLink(activePage, "progression", `${base}pages/progression.html`, "Progression")}
-          ${navLink(activePage, "reference", `${base}pages/reference.html`, "Reference")}
-          ${navLink(activePage, "weapons", `${base}pages/weapons.html`, "Weapons")}
-        </nav>
+        <div class="header-actions">
+          <nav class="site-nav" aria-label="Main navigation">
+            ${navLink(activePage, "overview", `${base}pages/overview.html`, "Overview")}
+            ${navLink(activePage, "boss-timers", `${base}pages/boss-timers.html`, "Boss Timers")}
+            ${navLink(activePage, "raids", `${base}pages/raids.html`, "Raids")}
+            ${navLink(activePage, "progression", `${base}pages/progression.html`, "Progression")}
+            ${navLink(activePage, "reference", `${base}pages/reference.html`, "Reference")}
+            ${navLink(activePage, "library", `${base}pages/library.html`, "Notes")}
+            ${navLink(activePage, "weapons", `${base}pages/weapons.html`, "Weapons")}
+            ${navLink(activePage, "ranks", `${base}pages/ranks.html`, "Ranks")}
+          </nav>
+        </div>
       </div>
     `;
   }
@@ -186,8 +189,11 @@
 
     footer.innerHTML = `
       <div class="site-footer__inner page-shell">
-        <p>Static HTML, handcrafted CSS, vanilla JS, and local JSON data.</p>
-        <p>(c) ${getCurrentYear()} Game Helper</p>
+        <div class="footer-copy">
+          <p>Static HTML, handcrafted CSS, vanilla JS, and local JSON data.</p>
+          <p>(c) ${getCurrentYear()} Game Helper</p>
+        </div>
+        <a href="${getBasePath()}index.html" class="button button--secondary footer-project-link">Project Info</a>
       </div>
     `;
   }

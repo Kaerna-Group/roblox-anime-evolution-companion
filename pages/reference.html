@@ -16,18 +16,31 @@
         <span class="eyebrow">Static reference</span>
         <h1>Reference Guide</h1>
         <p class="section-copy">
-          One clean place for progression information: power sources, upgrade rates,
-          sword reforge costs, and practical tips for climbing early worlds faster.
+          Core stored values for progression and helper maintenance:
+          power sources, upgrade rates, totals, source links, and event notes.
         </p>
       </section>
 
-      <section class="section-block">
+      <section class="section-block content-with-toc">
+        <aside class="panel toc-panel">
+          <h2>On This Page</h2>
+          <nav class="toc-list" aria-label="Reference sections">
+            <a class="toc-link" href="#power-sources-section">Power Sources</a>
+            <a class="toc-link" href="#upgrade-rates-section">Upgrade Rates</a>
+            <a class="toc-link" href="#world-cycle-section">World Boss Cycle</a>
+            <a class="toc-link" href="#community-links-section">Community Links</a>
+            <a class="toc-link" href="#event-history-section">Event History</a>
+          </nav>
+        </aside>
+
+        <div>
+      <section id="power-sources-section" class="section-block toc-target">
         <div class="section-header"><div><h2 class="section-title">Power Sources</h2></div></div>
         <div id="power-sources" class="grid-3"><div class="card">Loading...</div></div>
       </section>
 
       <section class="section-block split-layout">
-        <article class="panel">
+        <article id="upgrade-rates-section" class="panel toc-target">
           <div class="section-header">
             <div>
               <h2>Upgrade Rates</h2>
@@ -42,34 +55,50 @@
               <tbody id="upgrade-rates-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
             </table>
           </div>
+          <div class="section-block">
+            <h2>Totals</h2>
+            <div id="totals-boxes" class="stack-grid"><div class="mini-stat"><span>Loading...</span><strong>...</strong></div></div>
+          </div>
         </article>
 
         <div>
           <article class="panel">
-            <h2>Totals</h2>
-            <div id="totals-boxes" class="stack-grid"><div class="mini-stat"><span>Loading...</span><strong>...</strong></div></div>
-          </article>
-          <article class="panel section-block">
             <h2>Quick Summary</h2>
             <div id="summary-notes" class="stack-grid">Loading...</div>
           </article>
         </div>
       </section>
 
-      <section class="section-block panel">
-        <div class="section-header"><div><h2 class="section-title">Weapon Reforge</h2></div></div>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead><tr><th>Stars</th><th>Amount Needed</th><th>Resource</th></tr></thead>
-            <tbody id="reforge-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
-          </table>
+      <section id="world-cycle-section" class="section-block panel toc-target">
+        <div class="section-header">
+          <div>
+            <h2>World Boss Cycle</h2>
+            <p>Quick reminder for the broad spawn interval players shared.</p>
+          </div>
         </div>
-        <div id="reforge-total" class="notice section-block">Loading...</div>
+        <div id="world-boss-cycle" class="stack-grid">Loading...</div>
       </section>
 
-      <section class="section-block">
-        <div class="section-header"><div><h2 class="section-title">Early World Tips</h2></div></div>
-        <div id="tips-list" class="grid-2"><div class="card">Loading...</div></div>
+      <section id="community-links-section" class="section-block panel toc-target">
+        <div class="section-header">
+          <div>
+            <h2>Community Links</h2>
+            <p>Useful entry points that were shared with the wiki data bundle.</p>
+          </div>
+        </div>
+        <div id="community-links" class="stack-list">Loading...</div>
+      </section>
+
+      <section id="event-history-section" class="section-block toc-target">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Event History</h2>
+            <p>Ended or removed event notes with exact message dates.</p>
+          </div>
+        </div>
+        <div id="event-history" class="grid-2">Loading...</div>
+      </section>
+        </div>
       </section>
     </main>
 

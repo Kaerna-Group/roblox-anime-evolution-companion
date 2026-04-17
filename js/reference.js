@@ -8,8 +8,9 @@ async function initReference() {
   renderPowerSources(data.powerSources || []);
   renderUpgradeRates(data.upgradeRates || []);
   renderTotals(data.totals || {});
-  renderWeaponReforge(data.weaponReforge || {});
-  renderTips(data.earlyProgressionTips || []);
+  renderWorldBossCycle(data.worldBossCycle || {});
+  renderCommunityResources(data.communityResources || {});
+  renderEventHistory(data.eventHistory || []);
   renderSummaryNotes(data);
 }
 
@@ -71,42 +72,10 @@ function renderTotals(totals) {
   `;
 }
 
-function renderWeaponReforge(weaponReforge) {
-  const levels = Array.isArray(weaponReforge.levels) ? weaponReforge.levels : [];
-
-  document.getElementById("reforge-body").innerHTML = levels
-    .map((item) => `
-      <tr>
-        <td>${item.stars}-star</td>
-        <td>${Site.formatNumber(item.amountNeeded || 0)}</td>
-        <td>${Site.escapeHtml(weaponReforge.resourceName || "Resource")}</td>
-      </tr>
-    `)
-    .join("");
-
-  document.getElementById("reforge-total").innerHTML = `
-    <strong>Total needed:</strong> ${Site.formatNumber(weaponReforge.totalNeeded || 0)}
-    ${Site.escapeHtml(weaponReforge.resourceName || "items")}
-  `;
-}
-
-function renderTips(tips) {
-  document.getElementById("tips-list").innerHTML = tips
-    .map((tip, index) => `
-      <article class="card">
-        <div class="tip-item">
-          <div class="tip-index">${index + 1}</div>
-          <p class="muted-copy">${Site.escapeHtml(tip)}</p>
-        </div>
-      </article>
-    `)
-    .join("");
-}
-
 function renderSummaryNotes(data) {
   const powerCount = Array.isArray(data.powerSources) ? data.powerSources.length : 0;
   const rateCount = Array.isArray(data.upgradeRates) ? data.upgradeRates.length : 0;
-  const reforgeCount = Array.isArray(data.weaponReforge?.levels) ? data.weaponReforge.levels.length : 0;
+  const linkCount = Array.isArray(data.communityResources?.links) ? data.communityResources.links.length : 0;
 
   document.getElementById("summary-notes").innerHTML = `
     <div class="mini-stat">
@@ -118,10 +87,69 @@ function renderSummaryNotes(data) {
       <strong>${rateCount}</strong>
     </div>
     <div class="mini-stat">
-      <span>Weapon reforge steps</span>
-      <strong>${reforgeCount}</strong>
+      <span>Community links saved</span>
+      <strong>${linkCount}</strong>
+    </div>
+    <div class="mini-stat">
+      <span>Event notes stored</span>
+      <strong>${Array.isArray(data.eventHistory) ? data.eventHistory.length : 0}</strong>
     </div>
   `;
+}
+
+function renderWorldBossCycle(cycle) {
+  document.getElementById("world-boss-cycle").innerHTML = `
+    <div class="mini-stat">
+      <span>Interval</span>
+      <strong>${Site.escapeHtml(cycle.interval || "Unknown")}</strong>
+      <span>Source: ${Site.escapeHtml(cycle.sourceDate || "Unknown")}</span>
+    </div>
+    <div class="mini-stat">
+      <span>Usage</span>
+      <strong>Quick sanity-check</strong>
+      <span>Use the Boss Timers page for the full per-world schedule.</span>
+    </div>
+  `;
+}
+
+function renderCommunityResources(resources) {
+  const links = Array.isArray(resources.links) ? resources.links : [];
+  const extras = Array.isArray(resources.extras) ? resources.extras : [];
+
+  document.getElementById("community-links").innerHTML = [
+    ...links.map(
+      (link) => `
+        <a class="card lift-card" href="${Site.escapeHtml(link.url || "#")}" target="_blank" rel="noreferrer">
+          <p class="meta-label">Link</p>
+          <h3>${Site.escapeHtml(link.label || "")}</h3>
+          <p class="muted-copy">${Site.escapeHtml(link.url || "")}</p>
+        </a>
+      `
+    ),
+    ...extras.map(
+      (item) => `
+        <article class="card">
+          <p class="meta-label">Note</p>
+          <p class="muted-copy">${Site.escapeHtml(item)}</p>
+        </article>
+      `
+    )
+  ].join("");
+}
+
+function renderEventHistory(events) {
+  document.getElementById("event-history").innerHTML = events
+    .map(
+      (event) => `
+        <article class="card">
+          <p class="meta-label">${Site.escapeHtml(event.sourceDate || "Unknown date")}</p>
+          <h3>${Site.escapeHtml(event.name || "")}</h3>
+          <p class="muted-copy">${Site.escapeHtml(event.status || "")}</p>
+          <p class="muted-copy">${Site.escapeHtml(event.details || "")}</p>
+        </article>
+      `
+    )
+    .join("");
 }
 
 function handleError(error) {
@@ -130,10 +158,10 @@ function handleError(error) {
   const fallback = '<div class="notice notice--error">Failed to load reference data.</div>';
 
   document.getElementById("power-sources").innerHTML = fallback;
-  document.getElementById("tips-list").innerHTML = fallback;
   document.getElementById("summary-notes").innerHTML = fallback;
   document.getElementById("totals-boxes").innerHTML = fallback;
-  document.getElementById("reforge-total").innerHTML = "Failed to load data.";
+  document.getElementById("world-boss-cycle").innerHTML = fallback;
+  document.getElementById("community-links").innerHTML = fallback;
+  document.getElementById("event-history").innerHTML = fallback;
   document.getElementById("upgrade-rates-body").innerHTML = '<tr><td colspan="3" class="table-empty table-empty--error">Failed to load data.</td></tr>';
-  document.getElementById("reforge-body").innerHTML = '<tr><td colspan="3" class="table-empty table-empty--error">Failed to load data.</td></tr>';
 }

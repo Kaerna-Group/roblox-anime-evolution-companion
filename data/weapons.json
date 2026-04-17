@@ -14,8 +14,8 @@
     {
       "world": "World 12 / Orc Sanctuary",
       "weapon": "Idol",
-      "monster": "Shaman",
-      "dropRate": 0.5
+      "monster": "Riese",
+      "dropRate": 5
     },
     {
       "world": "World 10 / Shadow Castle",
@@ -76,6 +76,11 @@
     { "label": "AL Series", "range": "AL1 - AL12" },
     { "label": "GM Series", "range": "GM1 - GM15" },
     { "label": "PT Series", "range": "PT1 - PT15" }
+  ],
+  "rankNotes": [
+    "This dataset tracks a base ladder from E- up to RE S.",
+    "Series ranks are grouped into named bands such as S, G, T, Sh, Sw, Tn, H, SD, AL, GM, and PT.",
+    "The current stored ranges are community reference values and should be treated as maintained helper data."
   ]
 }
 

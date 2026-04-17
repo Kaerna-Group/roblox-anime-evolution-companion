@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weapons & Ranks | Game Helper</title>
+  <title>Weapons | Game Helper</title>
   <link rel="icon" type="image/png" href="../assets/logo.png" />
   <link rel="stylesheet" href="../styles/site.css" />
 </head>
@@ -14,10 +14,10 @@
     <main class="page-shell page-main">
       <section class="hero">
         <span class="eyebrow">Weapon guide</span>
-        <h1>Weapons & Ranks</h1>
+        <h1>Weapons</h1>
         <p class="section-copy">
-          Boss damage guide, easiest SS farms, searchable SS weapon list, and rank progression tables
-          presented with less clutter and a stronger visual punch.
+          Boss damage guide, easiest SS farms, searchable SS weapon list, and weapon reforge requirements
+          collected into one page with less clutter.
         </p>
       </section>
 
@@ -28,12 +28,24 @@
         <article class="stat-card"><p>Boss DPS Rule</p><strong id="summary-dps-rule">Loading...</strong></article>
       </section>
 
-      <section class="section-block callout callout--warning">
+      <section class="section-block content-with-toc">
+        <aside class="panel toc-panel">
+          <h2>On This Page</h2>
+          <nav class="toc-list" aria-label="Weapons sections">
+            <a class="toc-link" href="#dps-guide-section">Boss DPS Guide</a>
+            <a class="toc-link" href="#easy-weapons-section">Easy 5-star Options</a>
+            <a class="toc-link" href="#reforge-section">Weapon Reforge</a>
+            <a class="toc-link" href="#weapon-table-section">SS Weapon Table</a>
+          </nav>
+        </aside>
+
+        <div>
+      <section id="dps-guide-section" class="section-block callout callout--warning toc-target">
         <h2>How To Deal More Damage To World Bosses / Divine Angels</h2>
         <div id="dps-guide">Loading...</div>
       </section>
 
-      <section class="section-block">
+      <section id="easy-weapons-section" class="section-block toc-target">
         <div class="section-header">
           <div>
             <h2 class="section-title">Best Easy 5-star Options</h2>
@@ -43,7 +55,24 @@
         <div id="easy-weapons" class="grid-3"><div class="card">Loading...</div></div>
       </section>
 
-      <section class="section-block panel">
+      <section id="reforge-section" class="section-block panel toc-target">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Weapon Reforge</h2>
+            <p>Swords needed for each star level and the total path to 5-star.</p>
+          </div>
+          <a href="./ranks.html" class="button button--secondary">Open Ranks Page</a>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Stars</th><th>Amount Needed</th><th>Resource</th></tr></thead>
+            <tbody id="reforge-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
+          </table>
+        </div>
+        <div id="reforge-total" class="notice section-block">Loading...</div>
+      </section>
+
+      <section id="weapon-table-section" class="section-block panel toc-target">
         <div class="filter-bar">
           <div>
             <h2>SS Weapon Table</h2>
@@ -65,16 +94,7 @@
           </table>
         </div>
       </section>
-
-      <section class="section-block">
-        <div class="section-header"><div><h2 class="section-title">Ranks</h2></div></div>
-
-        <article class="panel">
-          <h2>Base Ranks</h2>
-          <div id="base-ranks" class="rank-cloud"><span class="pill">Loading...</span></div>
-        </article>
-
-        <div id="series-ranks" class="grid-3 section-block"><div class="card">Loading...</div></div>
+        </div>
       </section>
     </main>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Helper</title>
+  <title>Project Info | Game Helper</title>
   <link rel="icon" type="image/png" href="./assets/logo.png" />
   <link rel="stylesheet" href="./styles/site.css" />
 </head>
@@ -15,24 +15,24 @@
       <section class="hero">
         <div class="hero-grid">
           <div>
-            <span class="eyebrow">Static helper suite</span>
-            <h1>Game Helper</h1>
+            <span class="eyebrow">Project information</span>
+            <h1>About This Project</h1>
             <p class="section-copy">
-              Multipage hub for Anime Evolution players with boss timing, raid rotations,
-              progression math, weapon farming routes, and clean reference pages that load fast.
+              This site is a static Anime Evolution helper built around community-collected data.
+              The goal is to keep timers, progression notes, weapon routes, and rank references in one fast project that is easy to update.
             </p>
             <div class="hero-actions">
-              <a href="./pages/overview.html" class="button button--primary">Open Overview</a>
-              <a href="./pages/boss-timers.html" class="button button--primary">Open Boss Timers</a>
-              <a href="./pages/raids.html" class="button button--secondary">Open Raids</a>
-              <a href="./pages/progression.html" class="button button--secondary">Open Progression</a>
+              <a href="./pages/overview.html" class="button button--primary">Open Helper</a>
+              <a href="./pages/library.html" class="button button--primary">Open Notes</a>
+              <a href="./pages/weapons.html" class="button button--secondary">Open Weapons</a>
+              <a href="./pages/ranks.html" class="button button--secondary">Open Ranks</a>
             </div>
           </div>
 
           <aside class="hero-aside">
             <div class="mini-stat"><span>Built for</span><strong>GitHub Pages</strong></div>
             <div class="mini-stat"><span>Stack</span><strong>HTML / CSS / JS</strong></div>
-            <div class="mini-stat"><span>Feel</span><strong>Fast, glossy, readable</strong></div>
+            <div class="mini-stat"><span>Data style</span><strong>Local JSON + community notes</strong></div>
           </aside>
         </div>
       </section>
@@ -40,8 +40,8 @@
       <section class="section-block">
         <div class="section-header">
           <div>
-            <h2 class="section-title">Main Sections</h2>
-            <p>Everything important is split into focused pages, so it stays clear instead of turning into one giant wall.</p>
+            <h2 class="section-title">What The Project Covers</h2>
+            <p>The helper is split into focused pages so the project can grow without turning into one huge messy page.</p>
           </div>
         </div>
 
@@ -85,27 +85,54 @@
           <a href="./pages/reference.html" class="home-feature__link">
             <article class="card lift-card">
               <p class="meta-label">Reference</p>
-              <h3>Static Guide</h3>
-              <p class="muted-copy">Power sources, upgrade rates, reforge costs, and early world progression notes in one place.</p>
-              <div class="meta-row"><span class="pill pill--success">Totals</span><span class="pill">Tips</span></div>
+              <h3>Core Reference</h3>
+              <p class="muted-copy">Power sources, upgrade rates, totals, source links, and tracked event notes.</p>
+              <div class="meta-row"><span class="pill pill--success">Totals</span><span class="pill">Sources</span></div>
+            </article>
+          </a>
+
+          <a href="./pages/library.html" class="home-feature__link">
+            <article class="card lift-card">
+              <p class="meta-label">Notes</p>
+              <h3>Community Notes</h3>
+              <p class="muted-copy">E-notation, game pass order, weekend boosts, and early world tips collected into one cleaner page.</p>
+              <div class="meta-row"><span class="pill pill--success">E-notation</span><span class="pill">Boosts</span></div>
             </article>
           </a>
 
           <a href="./pages/weapons.html" class="home-feature__link">
             <article class="card lift-card">
               <p class="meta-label">Guide</p>
-              <h3>Weapons & Ranks</h3>
-              <p class="muted-copy">Boss DPS guide, easiest SS farms, searchable SS weapon table, and rank progression lists.</p>
-              <div class="meta-row"><span class="pill pill--gold">SS list</span><span class="pill pill--success">Drop rates</span></div>
+              <h3>Weapons</h3>
+              <p class="muted-copy">Boss DPS guide, easiest SS farms, searchable weapon table, and weapon reforge requirements.</p>
+              <div class="meta-row"><span class="pill pill--gold">SS list</span><span class="pill pill--success">Reforge</span></div>
             </article>
           </a>
 
-          <article class="card">
-            <p class="meta-label">Design note</p>
-            <h3>Made to feel premium</h3>
-            <p class="muted-copy">Shared gradients, glass panels, tighter typography, and cleaner spacing make the whole thing feel intentional instead of template-like.</p>
-            <p class="quiet-note">Static, simple, expandable.</p>
-          </article>
+          <a href="./pages/ranks.html" class="home-feature__link">
+            <article class="card lift-card">
+              <p class="meta-label">Ranks</p>
+              <h3>Rank Reference</h3>
+              <p class="muted-copy">Base rank ladder, stored series ranges, and a focused summary page just for rank data.</p>
+              <div class="meta-row"><span class="pill pill--gold">Base ladder</span><span class="pill pill--success">Series ranges</span></div>
+            </article>
+          </a>
+
+          <div class="project-banner section-block">
+            <article class="card">
+              <p class="meta-label">Project direction</p>
+              <h3>Built to stay editable</h3>
+              <p class="muted-copy">Everything important lives in plain HTML, CSS, JS, and JSON so future wiki and Discord updates can be added quickly without rebuilding the whole site.</p>
+              <p class="quiet-note">Static, simple, expandable.</p>
+            </article>
+
+            <aside class="project-banner__cta">
+              <span class="eyebrow">Quick jump</span>
+              <strong>Need the actual game data right now?</strong>
+              <p class="muted-copy">Skip the project overview and jump straight into the live helper pages.</p>
+              <a href="./pages/overview.html" class="button button--primary">Go To Overview</a>
+            </aside>
+          </div>
         </div>
       </section>
     </main>
