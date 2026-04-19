@@ -1,0 +1,13 @@
+{
+  "reforge": {
+    "resourceName": "Swords",
+    "levels": [
+      { "stars": 1, "amountNeeded": 2 },
+      { "stars": 2, "amountNeeded": 5 },
+      { "stars": 3, "amountNeeded": 10 },
+      { "stars": 4, "amountNeeded": 15 },
+      { "stars": 5, "amountNeeded": 30 }
+    ],
+    "totalNeeded": 58
+  }
+}

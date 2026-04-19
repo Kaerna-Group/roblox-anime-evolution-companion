@@ -11,92 +11,90 @@
   <div class="site-wrap">
     <header id="site-header" class="site-header"></header>
 
-    <main class="page-shell page-main">
-      <section class="hero">
-        <span class="eyebrow">Weapon guide</span>
-        <h1>Weapons</h1>
-        <p class="section-copy">
-          Boss damage guide, easiest SS farms, searchable SS weapon list, and weapon reforge requirements
-          collected into one page with less clutter.
-        </p>
-      </section>
+    <div class="page-layout page-layout--toc">
+      <aside class="panel toc-panel">
+        <h2>On This Page</h2>
+        <nav class="toc-list" aria-label="Weapons sections">
+          <a class="toc-link" href="#dps-guide-section">Boss DPS Guide</a>
+          <a class="toc-link" href="#easy-weapons-section">Easy 5-star Options</a>
+          <a class="toc-link" href="#reforge-section">Weapon Reforge</a>
+          <a class="toc-link" href="#weapon-table-section">SS Weapon Table</a>
+        </nav>
+      </aside>
 
-      <section class="section-block stats-grid">
-        <article class="stat-card"><p>Tracked SS Weapons</p><strong id="summary-weapon-count">Loading...</strong></article>
-        <article class="stat-card"><p>Highest Damage</p><strong id="summary-highest-damage">Loading...</strong></article>
-        <article class="stat-card"><p>Best Easy Farm</p><strong id="summary-best-farm">Loading...</strong></article>
-        <article class="stat-card"><p>Boss DPS Rule</p><strong id="summary-dps-rule">Loading...</strong></article>
-      </section>
+      <main class="page-shell page-main">
+        <section class="hero">
+          <span class="eyebrow">Weapon guide</span>
+          <h1>Weapons</h1>
+          <p class="section-copy">
+            Boss damage guide, easiest SS farms, searchable SS weapon list, and weapon reforge requirements
+            collected into one page with less clutter.
+          </p>
+        </section>
 
-      <section class="section-block content-with-toc">
-        <aside class="panel toc-panel">
-          <h2>On This Page</h2>
-          <nav class="toc-list" aria-label="Weapons sections">
-            <a class="toc-link" href="#dps-guide-section">Boss DPS Guide</a>
-            <a class="toc-link" href="#easy-weapons-section">Easy 5-star Options</a>
-            <a class="toc-link" href="#reforge-section">Weapon Reforge</a>
-            <a class="toc-link" href="#weapon-table-section">SS Weapon Table</a>
-          </nav>
-        </aside>
+        <section class="section-block stats-grid">
+          <article class="stat-card"><p>Tracked SS Weapons</p><strong id="summary-weapon-count">Loading...</strong></article>
+          <article class="stat-card"><p>Highest Damage</p><strong id="summary-highest-damage">Loading...</strong></article>
+          <article class="stat-card"><p>Best Easy Farm</p><strong id="summary-best-farm">Loading...</strong></article>
+          <article class="stat-card"><p>Boss DPS Rule</p><strong id="summary-dps-rule">Loading...</strong></article>
+        </section>
 
-        <div>
-      <section id="dps-guide-section" class="section-block callout callout--warning toc-target">
-        <h2>How To Deal More Damage To World Bosses / Divine Angels</h2>
-        <div id="dps-guide">Loading...</div>
-      </section>
+        <section id="dps-guide-section" class="section-block callout callout--warning toc-target">
+          <h2>How To Deal More Damage To World Bosses / Divine Angels</h2>
+          <div id="dps-guide">Loading...</div>
+        </section>
 
-      <section id="easy-weapons-section" class="section-block toc-target">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Best Easy 5-star Options</h2>
-            <p>Easiest SS weapons to push to 5 stars for strong boss DPS.</p>
+        <section id="easy-weapons-section" class="section-block toc-target">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Best Easy 5-star Options</h2>
+              <p>Easiest SS weapons to push to 5 stars for strong boss DPS.</p>
+            </div>
           </div>
-        </div>
-        <div id="easy-weapons" class="grid-3"><div class="card">Loading...</div></div>
-      </section>
+          <div id="easy-weapons" class="grid-3"><div class="card">Loading...</div></div>
+        </section>
 
-      <section id="reforge-section" class="section-block panel toc-target">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Weapon Reforge</h2>
-            <p>Swords needed for each star level and the total path to 5-star.</p>
+        <section id="reforge-section" class="section-block panel toc-target">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Weapon Reforge</h2>
+              <p>Swords needed for each star level and the total path to 5-star.</p>
+            </div>
+            <a href="./ranks.html" class="button button--secondary">Open Ranks Page</a>
           </div>
-          <a href="./ranks.html" class="button button--secondary">Open Ranks Page</a>
-        </div>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead><tr><th>Stars</th><th>Amount Needed</th><th>Resource</th></tr></thead>
-            <tbody id="reforge-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
-          </table>
-        </div>
-        <div id="reforge-total" class="notice section-block">Loading...</div>
-      </section>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Stars</th><th>Amount Needed</th><th>Resource</th></tr></thead>
+              <tbody id="reforge-body"><tr><td colspan="3" class="table-empty">Loading...</td></tr></tbody>
+            </table>
+          </div>
+          <div id="reforge-total" class="notice section-block">Loading...</div>
+        </section>
 
-      <section id="weapon-table-section" class="section-block panel toc-target">
-        <div class="filter-bar">
-          <div>
-            <h2>SS Weapon Table</h2>
-            <p class="muted-copy">Search by world, weapon, or monster.</p>
+        <section id="weapon-table-section" class="section-block panel toc-target">
+          <div class="filter-bar">
+            <div>
+              <h2>SS Weapon Table</h2>
+              <p class="muted-copy">Search by world, weapon, or monster.</p>
+            </div>
+            <div class="form-row">
+              <input id="weapon-filter-input" type="text" placeholder="Search weapon / world / monster" class="input" />
+              <button id="weapon-filter-clear" class="button button--secondary" type="button">Clear</button>
+            </div>
           </div>
-          <div class="form-row">
-            <input id="weapon-filter-input" type="text" placeholder="Search weapon / world / monster" class="input" />
-            <button id="weapon-filter-clear" class="button button--secondary" type="button">Clear</button>
-          </div>
-        </div>
 
-        <p class="muted-copy section-block">Showing <span id="visible-weapon-count">0</span> items</p>
-        <div class="table-wrap section-block">
-          <table class="data-table">
-            <thead>
-              <tr><th>World</th><th>Weapon</th><th>Damage</th><th>Drop Rate</th><th>Monster</th></tr>
-            </thead>
-            <tbody id="weapons-table-body"><tr><td colspan="5" class="table-empty">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </section>
-        </div>
-      </section>
-    </main>
+          <p class="muted-copy section-block">Showing <span id="visible-weapon-count">0</span> items</p>
+          <div class="table-wrap section-block">
+            <table class="data-table">
+              <thead>
+                <tr><th>World</th><th>Weapon</th><th>Damage</th><th>Drop Rate</th><th>Monster</th></tr>
+              </thead>
+              <tbody id="weapons-table-body"><tr><td colspan="5" class="table-empty">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <footer id="site-footer" class="site-footer"></footer>
   </div>

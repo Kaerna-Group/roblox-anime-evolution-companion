@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initRanks() {
-  const data = await Site.loadJson("weapons.json");
+  const data = await Site.loadJson("ranks.json");
   const baseRanks = Array.isArray(data.baseRanks) ? data.baseRanks : [];
   const seriesRanks = Array.isArray(data.seriesRanks) ? data.seriesRanks : [];
   const rankNotes = Array.isArray(data.rankNotes) ? data.rankNotes : [];

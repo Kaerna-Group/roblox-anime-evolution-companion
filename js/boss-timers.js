@@ -22,6 +22,22 @@ async function initBossTimers() {
   updateBossUI();
 
   window.setInterval(updateBossUI, 1000);
+  window.addEventListener("resize", scheduleTruncationRefresh);
+}
+
+function scheduleTruncationRefresh() {
+  requestAnimationFrame(() => refreshTruncationTooltips());
+}
+
+function refreshTruncationTooltips() {
+  document.querySelectorAll(".site-ellipsis-tooltip").forEach((wrapper) => {
+    const inner = wrapper.querySelector(".site-ellipsis-tooltip__text");
+    if (!inner) return;
+    const full = inner.textContent.trim();
+    wrapper.setAttribute("data-tooltip", full);
+    const truncated = inner.scrollWidth > inner.clientWidth + 1;
+    wrapper.classList.toggle("is-truncated", truncated);
+  });
 }
 
 function renderBossSections() {
@@ -34,6 +50,7 @@ function renderBossSections() {
     .join("");
 
   applyFilter();
+  scheduleTruncationRefresh();
 }
 
 function buildBossCard(boss, group) {
@@ -47,8 +64,12 @@ function buildBossCard(boss, group) {
       <div class="card-heading boss-card__header">
         <div class="boss-card__title">
           <p class="meta-label">${group}</p>
-          <h3>${Site.escapeHtml(boss.name)}</h3>
-          <p class="muted-copy">World ${Site.escapeHtml(boss.world)}</p>
+          <h3 class="boss-card__name">
+            <span class="site-ellipsis-tooltip">
+              <span class="site-ellipsis-tooltip__text">${Site.escapeHtml(boss.name)}</span>
+            </span>
+          </h3>
+          <p class="muted-copy boss-card__world">World ${Site.escapeHtml(boss.world)}</p>
         </div>
         ${boss.needsVerification ? '<span class="pill pill--warning boss-card__badge">Verify timing</span>' : ""}
       </div>
@@ -56,11 +77,19 @@ function buildBossCard(boss, group) {
       <div class="mini-stats">
         <div class="mini-stat">
           <span>Next Spawn</span>
-          <strong id="${group}-next-${boss.world}">Loading...</strong>
+          <strong class="boss-card__stat-strong">
+            <span class="site-ellipsis-tooltip">
+              <span id="${group}-next-${boss.world}" class="site-ellipsis-tooltip__text">Loading...</span>
+            </span>
+          </strong>
         </div>
         <div class="mini-stat">
           <span>Countdown</span>
-          <strong id="${group}-countdown-${boss.world}" class="accent-copy">Loading...</strong>
+          <strong class="boss-card__stat-strong">
+            <span class="site-ellipsis-tooltip">
+              <span id="${group}-countdown-${boss.world}" class="site-ellipsis-tooltip__text accent-copy">Loading...</span>
+            </span>
+          </strong>
         </div>
       </div>
 
@@ -133,15 +162,26 @@ function updateBossUI() {
   const nextWorld = getGlobalNext(bossState.worldBosses, now);
   const nextDivine = getGlobalNext(bossState.divineBosses, now);
 
-  document.getElementById("summary-world").textContent = nextWorld
+  setSummaryLine("summary-world", nextWorld
     ? `${nextWorld.boss.name} - ${Site.formatCountdown(nextWorld.next.diffMs)}`
-    : "No data";
+    : "No data");
 
-  document.getElementById("summary-divine").textContent = nextDivine
+  setSummaryLine("summary-divine", nextDivine
     ? `${nextDivine.boss.name} - ${Site.formatCountdown(nextDivine.next.diffMs)}`
-    : "No data";
+    : "No data");
 
   document.getElementById("summary-timezone").textContent = Site.getTimezoneLabel();
+  scheduleTruncationRefresh();
+}
+
+function setSummaryLine(elementId, text) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  el.textContent = text;
+  const wrap = el.closest(".site-ellipsis-tooltip");
+  if (wrap) {
+    wrap.setAttribute("data-tooltip", text);
+  }
 }
 
 function updateGroupCards(group, bosses, now) {
@@ -149,6 +189,8 @@ function updateGroupCards(group, bosses, now) {
     const next = Site.getNextSpawnFromSlots(boss.slots, now);
     const nextEl = document.getElementById(`${group}-next-${boss.world}`);
     const countdownEl = document.getElementById(`${group}-countdown-${boss.world}`);
+
+    if (!nextEl || !countdownEl) continue;
 
     if (!next) {
       nextEl.textContent = "No valid slots";

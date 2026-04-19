@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initReference() {
-  const data = await Site.loadJson("progression-reference.json");
+  const [progression, meta] = await Site.loadJsonMany("progression.json", "meta.json");
+  const data = { ...progression, ...meta };
 
   renderPowerSources(data.powerSources || []);
   renderUpgradeRates(data.upgradeRates || []);

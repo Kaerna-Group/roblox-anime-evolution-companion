@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initLibrary() {
-  const data = await Site.loadJson("progression-reference.json");
+  const data = await Site.loadJson("library.json");
 
   renderWeekendBoosts(data.weekendBoosts || []);
   renderTips(data.earlyProgressionTips || []);

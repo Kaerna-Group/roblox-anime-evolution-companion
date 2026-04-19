@@ -1,0 +1,62 @@
+{
+  "powerSources": [
+    {
+      "id": "index",
+      "title": "Index",
+      "subtitle": "Enemies",
+      "effect": "Gives you Power",
+      "maxMultiplier": 25.84
+    },
+    {
+      "id": "pets",
+      "title": "Pets",
+      "subtitle": "Soul gain",
+      "effect": "Gives you Soul gain",
+      "freeEggMaxMultiplier": 17.68,
+      "totalMaxMultiplier": 25.36
+    },
+    {
+      "id": "weapons",
+      "title": "Weapons",
+      "subtitle": "Damage",
+      "effect": "Gives you Damage",
+      "maxMultiplier": 14.49
+    }
+  ],
+  "upgradeRates": [
+    {
+      "id": "unluck",
+      "label": "Unluck",
+      "multiplier": 0.03,
+      "appliesTo": ["general"]
+    },
+    {
+      "id": "star_1",
+      "label": "1 Star",
+      "multiplier": 0.01,
+      "appliesTo": ["general"]
+    },
+    {
+      "id": "star_2",
+      "label": "2 Stars",
+      "multiplier": 0.01,
+      "appliesTo": ["general"]
+    },
+    {
+      "id": "star_3",
+      "label": "3 Stars",
+      "multiplier": 0.03,
+      "appliesTo": ["general", "swords"]
+    },
+    {
+      "id": "star_4",
+      "label": "4 Stars",
+      "multiplier": 0.03,
+      "appliesTo": ["swords"]
+    }
+  ],
+  "totals": {
+    "general": 0.08,
+    "swordsOnly": 0.09
+  }
+}

@@ -11,82 +11,80 @@
   <div class="site-wrap">
     <header id="site-header" class="site-header"></header>
 
-    <main class="page-shell page-main">
-      <section class="hero">
-        <span class="eyebrow">Community notes</span>
-        <h1>Notes & Helper Extras</h1>
-        <p class="section-copy">
-          Cleaned-up community notes page for e-notation, game pass priority, weekend boosts,
-          and early-world progression tips.
-        </p>
-      </section>
+    <div class="page-layout page-layout--toc">
+      <aside class="panel toc-panel">
+        <h2>On This Page</h2>
+        <nav class="toc-list" aria-label="Notes sections">
+          <a class="toc-link" href="#weekend-boosts-section">Weekend Boosts</a>
+          <a class="toc-link" href="#early-tips-section">Early World Tips</a>
+          <a class="toc-link" href="#game-pass-section">Game Pass Order</a>
+          <a class="toc-link" href="#notation-section">Annotation Table</a>
+        </nav>
+      </aside>
 
-      <section class="section-block content-with-toc">
-        <aside class="panel toc-panel">
-          <h2>On This Page</h2>
-          <nav class="toc-list" aria-label="Notes sections">
-            <a class="toc-link" href="#weekend-boosts-section">Weekend Boosts</a>
-            <a class="toc-link" href="#early-tips-section">Early World Tips</a>
-            <a class="toc-link" href="#game-pass-section">Game Pass Order</a>
-            <a class="toc-link" href="#notation-section">Annotation Table</a>
-          </nav>
-        </aside>
+      <main class="page-shell page-main">
+        <section class="hero">
+          <span class="eyebrow">Community notes</span>
+          <h1>Notes & Helper Extras</h1>
+          <p class="section-copy">
+            Cleaned-up community notes page for e-notation, game pass priority, weekend boosts,
+            and early-world progression tips.
+          </p>
+        </section>
 
-        <div>
-      <section id="weekend-boosts-section" class="section-block split-layout toc-target">
-        <article class="panel">
+        <section id="weekend-boosts-section" class="section-block split-layout toc-target">
+          <article class="panel">
+            <div class="section-header">
+              <div>
+                <h2>Weekend Boosts</h2>
+                <p>Community schedule snapshots with exact source dates.</p>
+              </div>
+            </div>
+            <div id="weekend-boosts" class="stack-grid">Loading...</div>
+          </article>
+
+          <article id="early-tips-section" class="panel toc-target">
+            <div class="section-header">
+              <div>
+                <h2>Early World Tips</h2>
+                <p>Fast reminders for smoother early progression.</p>
+              </div>
+            </div>
+            <div id="tips-list" class="grid-2">Loading...</div>
+          </article>
+        </section>
+
+        <section id="game-pass-section" class="section-block panel toc-target">
           <div class="section-header">
             <div>
-              <h2>Weekend Boosts</h2>
-              <p>Community schedule snapshots with exact source dates.</p>
+              <h2 class="section-title">Game Pass Order</h2>
+              <p>Latest player-made priority list currently stored in this project.</p>
             </div>
           </div>
-          <div id="weekend-boosts" class="stack-grid">Loading...</div>
-        </article>
+          <div id="game-pass-meta" class="notice">Loading...</div>
+          <div id="game-pass-order" class="grid-3 section-block">Loading...</div>
+          <div id="game-pass-notes" class="grid-2 section-block">Loading...</div>
+        </section>
 
-        <article id="early-tips-section" class="panel toc-target">
+        <section id="notation-section" class="section-block panel toc-target">
           <div class="section-header">
             <div>
-              <h2>Early World Tips</h2>
-              <p>Fast reminders for smoother early progression.</p>
+              <h2 class="section-title">E-Notation Table</h2>
+              <p>Abbreviation guide from the forwarded community list dated November 2, 2025.</p>
             </div>
           </div>
-          <div id="tips-list" class="grid-2">Loading...</div>
-        </article>
-      </section>
-
-      <section id="game-pass-section" class="section-block panel toc-target">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Game Pass Order</h2>
-            <p>Latest player-made priority list currently stored in this project.</p>
+          <div id="e-notation-notes" class="bullet-list section-block">Loading...</div>
+          <div class="table-wrap section-block">
+            <table class="data-table">
+              <thead>
+                <tr><th>Notation</th><th>Value</th><th>Abbreviation</th><th>Name</th></tr>
+              </thead>
+              <tbody id="e-notation-body"><tr><td colspan="4" class="table-empty">Loading...</td></tr></tbody>
+            </table>
           </div>
-        </div>
-        <div id="game-pass-meta" class="notice">Loading...</div>
-        <div id="game-pass-order" class="grid-3 section-block">Loading...</div>
-        <div id="game-pass-notes" class="grid-2 section-block">Loading...</div>
-      </section>
-
-      <section id="notation-section" class="section-block panel toc-target">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">E-Notation Table</h2>
-            <p>Abbreviation guide from the forwarded community list dated November 2, 2025.</p>
-          </div>
-        </div>
-        <div id="e-notation-notes" class="bullet-list section-block">Loading...</div>
-        <div class="table-wrap section-block">
-          <table class="data-table">
-            <thead>
-              <tr><th>Notation</th><th>Value</th><th>Abbreviation</th><th>Name</th></tr>
-            </thead>
-            <tbody id="e-notation-body"><tr><td colspan="4" class="table-empty">Loading...</td></tr></tbody>
-          </table>
-        </div>
-      </section>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
 
     <footer id="site-footer" class="site-footer"></footer>
   </div>

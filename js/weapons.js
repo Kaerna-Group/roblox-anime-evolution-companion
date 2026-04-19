@@ -3,15 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let weaponsData = null;
-let progressionData = null;
+let reforgeData = null;
 let filteredWeapons = [];
 
 async function initWeaponsPage() {
   try {
-    [weaponsData, progressionData] = await Promise.all([
-      Site.loadJson("weapons.json"),
-      Site.loadJson("progression-reference.json")
-    ]);
+    const [weaponsJson, reforgeFile] = await Site.loadJsonMany("weapons.json", "weapon-reforge.json");
+    weaponsData = weaponsJson;
+    reforgeData = reforgeFile.reforge || {};
     filteredWeapons = [...(weaponsData.ssWeapons || [])];
 
     renderGuide();
@@ -21,7 +20,7 @@ async function initWeaponsPage() {
     applyWeaponFilter("");
     renderSummary();
   } catch (error) {
-    console.error("Failed to load weapons.json", error);
+    console.error("Failed to load weapons or reforge data", error);
     renderWeaponsError();
   }
 }
@@ -72,7 +71,7 @@ function renderSummary() {
 }
 
 function renderReforge() {
-  const weaponReforge = progressionData?.weaponReforge || {};
+  const weaponReforge = reforgeData || {};
   const levels = Array.isArray(weaponReforge.levels) ? weaponReforge.levels : [];
 
   document.getElementById("reforge-body").innerHTML = levels

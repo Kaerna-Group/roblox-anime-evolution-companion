@@ -1,0 +1,44 @@
+{
+  "worldBossCycle": {
+    "interval": "Every 3 hours and 40 minutes",
+    "sourceDate": "2026-01-16"
+  },
+  "communityResources": {
+    "links": [
+      {
+        "label": "Play on Roblox",
+        "url": "https://www.roblox.com/games/133322550157181/SPIRIT-Anime-Evolution"
+      },
+      {
+        "label": "Discord Server",
+        "url": "https://discord.gg/anime-evolution"
+      },
+      {
+        "label": "Roblox Group",
+        "url": "https://www.roblox.com/communities/35547019/AEVO"
+      },
+      {
+        "label": "Anime Evolution Wiki",
+        "url": "https://anime-evolution.fandom.com/wiki/Anime_Evolution_Wiki"
+      }
+    ],
+    "extras": [
+      "Additional resources mentioned by the community include Farm Kill achievement macro guidance and a macro file/video for players without Fast Walk.",
+      "Wiki contribution instructions were shared on July 13, 2025 and July 14, 2025 in Discord messages."
+    ]
+  },
+  "eventHistory": [
+    {
+      "name": "Infinite Castle",
+      "status": "Removed / Ended",
+      "details": "Came with the Slayer achievements and was the only way to complete them.",
+      "sourceDate": "2025-11-05"
+    },
+    {
+      "name": "Halloween",
+      "status": "Added on 2025-10-25 and ended on 2025-11-08",
+      "details": "Included the Halloween raid and world plus raid achievements, pets, and mobs for index progression.",
+      "sourceDate": "2025-11-05"
+    }
+  ]
+}

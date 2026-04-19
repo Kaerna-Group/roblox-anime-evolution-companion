@@ -41,6 +41,10 @@
     return response.json();
   }
 
+  async function loadJsonMany(...filenames) {
+    return Promise.all(filenames.map((name) => loadJson(name)));
+  }
+
   function parseHHMM(value) {
     if (!value || typeof value !== "string") return null;
 
@@ -168,16 +172,18 @@
         </a>
 
         <div class="header-actions">
-          <nav class="site-nav" aria-label="Main navigation">
-            ${navLink(activePage, "overview", `${base}pages/overview.html`, "Overview")}
-            ${navLink(activePage, "boss-timers", `${base}pages/boss-timers.html`, "Boss Timers")}
-            ${navLink(activePage, "raids", `${base}pages/raids.html`, "Raids")}
-            ${navLink(activePage, "progression", `${base}pages/progression.html`, "Progression")}
-            ${navLink(activePage, "reference", `${base}pages/reference.html`, "Reference")}
-            ${navLink(activePage, "library", `${base}pages/library.html`, "Notes")}
-            ${navLink(activePage, "weapons", `${base}pages/weapons.html`, "Weapons")}
-            ${navLink(activePage, "ranks", `${base}pages/ranks.html`, "Ranks")}
-          </nav>
+          <div class="site-nav-wrap">
+            <nav class="site-nav" aria-label="Main navigation">
+              ${navLink(activePage, "overview", `${base}pages/overview.html`, "Overview")}
+              ${navLink(activePage, "boss-timers", `${base}pages/boss-timers.html`, "Boss Timers")}
+              ${navLink(activePage, "raids", `${base}pages/raids.html`, "Raids")}
+              ${navLink(activePage, "progression", `${base}pages/progression.html`, "Progression")}
+              ${navLink(activePage, "reference", `${base}pages/reference.html`, "Reference")}
+              ${navLink(activePage, "library", `${base}pages/library.html`, "Notes")}
+              ${navLink(activePage, "weapons", `${base}pages/weapons.html`, "Weapons")}
+              ${navLink(activePage, "ranks", `${base}pages/ranks.html`, "Ranks")}
+            </nav>
+          </div>
         </div>
       </div>
     `;
@@ -198,10 +204,29 @@
     `;
   }
 
+  function initNavScrollHint() {
+    const wrap = document.querySelector(".site-nav-wrap");
+    if (!wrap) return;
+
+    function update() {
+      const overflow = wrap.scrollWidth > wrap.clientWidth + 1;
+      const atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2;
+      wrap.classList.toggle("is-scrollable", overflow && !atEnd);
+    }
+
+    wrap.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    if (typeof ResizeObserver !== "undefined") {
+      new ResizeObserver(update).observe(wrap);
+    }
+    update();
+  }
+
   function initShell() {
     const activePage = document.body.dataset.page || "home";
     renderHeader(activePage);
     renderFooter();
+    initNavScrollHint();
   }
 
   window.Site = {
@@ -211,6 +236,7 @@
     formatMultiplier,
     escapeHtml,
     loadJson,
+    loadJsonMany,
     parseHHMM,
     getNextOccurrence,
     getNextSpawnFromSlots,

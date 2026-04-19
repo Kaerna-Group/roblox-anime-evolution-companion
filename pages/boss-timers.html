@@ -11,80 +11,92 @@
   <div class="site-wrap">
     <header id="site-header" class="site-header"></header>
 
-    <main class="page-shell page-main">
-      <section class="hero">
-        <span class="eyebrow">Boss schedule</span>
-        <h1>Boss Timers</h1>
-        <p class="section-copy">
-          Live countdowns for World and Divine bosses. Filter by world, keep the reset rules visible,
-          and glance the next important spawn in seconds.
-        </p>
-      </section>
+    <div class="page-layout page-layout--toc">
+      <aside class="panel toc-panel">
+        <h2>On This Page</h2>
+        <nav class="toc-list" aria-label="Boss timer sections">
+          <a class="toc-link" href="#filter-section">Filter Bosses</a>
+          <a class="toc-link" href="#world-bosses-section">World Bosses</a>
+          <a class="toc-link" href="#divine-bosses-section">Divine Bosses</a>
+          <a class="toc-link" href="#rules-section">Special Rules</a>
+        </nav>
+      </aside>
 
-      <section class="section-block stats-grid">
-        <article class="stat-card"><p>Next World Boss</p><strong id="summary-world">Loading...</strong></article>
-        <article class="stat-card"><p>Next Divine Boss</p><strong id="summary-divine">Loading...</strong></article>
-        <article class="stat-card"><p>Visible Timezone</p><strong id="summary-timezone">Loading...</strong></article>
-        <article class="stat-card"><p>Special Rules</p><strong id="summary-rules">Loading...</strong></article>
-      </section>
+      <main class="page-shell page-main">
+        <section class="hero">
+          <span class="eyebrow">Boss schedule</span>
+          <h1>Boss Timers</h1>
+          <p class="section-copy">
+            Live countdowns for World and Divine bosses. Filter by world, keep the reset rules visible,
+            and glance the next important spawn in seconds.
+          </p>
+        </section>
 
-      <section class="section-block content-with-toc">
-        <aside class="panel toc-panel">
-          <h2>On This Page</h2>
-          <nav class="toc-list" aria-label="Boss timer sections">
-            <a class="toc-link" href="#filter-section">Filter Bosses</a>
-            <a class="toc-link" href="#world-bosses-section">World Bosses</a>
-            <a class="toc-link" href="#divine-bosses-section">Divine Bosses</a>
-            <a class="toc-link" href="#rules-section">Special Rules</a>
-          </nav>
-        </aside>
+        <section class="section-block stats-grid">
+          <article class="stat-card">
+            <p>Next World Boss</p>
+            <strong class="stat-card__value">
+              <span class="site-ellipsis-tooltip">
+                <span id="summary-world" class="site-ellipsis-tooltip__text">Loading...</span>
+              </span>
+            </strong>
+          </article>
+          <article class="stat-card">
+            <p>Next Divine Boss</p>
+            <strong class="stat-card__value">
+              <span class="site-ellipsis-tooltip">
+                <span id="summary-divine" class="site-ellipsis-tooltip__text">Loading...</span>
+              </span>
+            </strong>
+          </article>
+          <article class="stat-card"><p>Visible Timezone</p><strong id="summary-timezone">Loading...</strong></article>
+          <article class="stat-card"><p>Special Rules</p><strong id="summary-rules">Loading...</strong></article>
+        </section>
 
-        <div>
-      <section id="filter-section" class="section-block panel toc-target">
-        <div class="filter-bar">
-          <div>
-            <h2>Filter Bosses</h2>
-            <p class="muted-copy">Type a world number from 1 to 30 to show only matching boss cards.</p>
+        <section id="filter-section" class="section-block panel toc-target">
+          <div class="filter-bar">
+            <div>
+              <h2>Filter Bosses</h2>
+              <p class="muted-copy">Type a world number from 1 to 30 to show only matching boss cards.</p>
+            </div>
+            <div class="form-row">
+              <input id="boss-filter-input" type="number" min="1" max="30" placeholder="Example: 13" class="input" />
+              <button id="boss-filter-clear" class="button button--secondary" type="button">Clear</button>
+            </div>
           </div>
-          <div class="form-row">
-            <input id="boss-filter-input" type="number" min="1" max="30" placeholder="Example: 13" class="input" />
-            <button id="boss-filter-clear" class="button button--secondary" type="button">Clear</button>
+        </section>
+
+        <section class="section-block callout callout--warning">
+          <h2>Important Spawn Note</h2>
+          <div id="rules-preview">Loading...</div>
+        </section>
+
+        <section id="world-bosses-section" class="section-block toc-target">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">World Bosses</h2>
+              <p>Live countdown updates every second.</p>
+            </div>
           </div>
-        </div>
-      </section>
+          <div id="world-boss-list" class="grid-3"><div class="card">Loading...</div></div>
+        </section>
 
-      <section class="section-block callout callout--warning">
-        <h2>Important Spawn Note</h2>
-        <div id="rules-preview">Loading...</div>
-      </section>
-
-      <section id="world-bosses-section" class="section-block toc-target">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">World Bosses</h2>
-            <p>Live countdown updates every second.</p>
+        <section id="divine-bosses-section" class="section-block toc-target">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Divine Bosses</h2>
+              <p>No Boss slots are shown as disabled badges.</p>
+            </div>
           </div>
-        </div>
-        <div id="world-boss-list" class="grid-3"><div class="card">Loading...</div></div>
-      </section>
+          <div id="divine-boss-list" class="grid-3"><div class="card">Loading...</div></div>
+        </section>
 
-      <section id="divine-bosses-section" class="section-block toc-target">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Divine Bosses</h2>
-            <p>No Boss slots are shown as disabled badges.</p>
-          </div>
-        </div>
-        <div id="divine-boss-list" class="grid-3"><div class="card">Loading...</div></div>
-      </section>
-
-      <section id="rules-section" class="section-block toc-target">
-        <div class="section-header"><div><h2 class="section-title">Special Rules</h2></div></div>
-        <div id="rules-list" class="grid-2"><div class="card">Loading...</div></div>
-      </section>
-        </div>
-      </section>
-    </main>
+        <section id="rules-section" class="section-block toc-target">
+          <div class="section-header"><div><h2 class="section-title">Special Rules</h2></div></div>
+          <div id="rules-list" class="grid-2"><div class="card">Loading...</div></div>
+        </section>
+      </main>
+    </div>
 
     <footer id="site-footer" class="site-footer"></footer>
   </div>
